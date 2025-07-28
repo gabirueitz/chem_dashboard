@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<link rel="stylesheet" href="/src/css/reset.css" />
+		<link rel="stylesheet" href="/src/css/style.css" />
+		<link rel="stylesheet" href="/src/css/dashboard.css" />
+
+		<title>Dashboard</title>
+		<script
+			type="module"
+			src="https://kit.fontawesome.com/01778cdb45.js"
+			crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation@1.4.0"></script>
+	</head>
+	<body>
+		<div id="menu-button">
+			<i class="fa-solid fa-xmark"></i>
+			<i class="fa-solid fa-bars hidden"></i>
+		</div>
+		<aside class="sidebar">
+			<div class="logo">
+				<h2>Gabiru<span>Code</span></h2>
+			</div>
+			<nav>
+				<ul>
+					<li>
+						<a class="nav-active" href="#"
+							><i class="fa-solid fa-house"></i> Dashboard</a
+						>
+					</li>
+					<li>
+						<a href="#"><i class="fa-solid fa-people-group"></i> Customers</a>
+					</li>
+					<li>
+						<a href="#"><i class="fa-solid fa-boxes-stacked"></i> Stock</a>
+					</li>
+					<li>
+						<a href="#"><i class="fa-solid fa-envelope"></i> Email</a>
+					</li>
+					<li>
+						<a href="#"><i class="fa-solid fa-comment"></i> Chat</a>
+					</li>
+					<li>
+						<a href="#"><i class="fa-solid fa-question"></i> Help</a>
+					</li>
+				</ul>
+				<ul>
+					<li>
+						<a href="#"><i class="fa-regular fa-bell"></i> Notifications</a>
+					</li>
+					<li>
+						<a href="#"><i class="fa-solid fa-gear"></i> Settings</a>
+					</li>
+					<li>
+						<a href="#"
+							><i class="fa-solid fa-right-from-bracket"></i> Logout</a
+						>
+					</li>
+				</ul>
+			</nav>
+		</aside>
+
+		<div class="main">
+			<header>
+				<form action="" class="data-info">
+					<label for="compound-selection">Compound:</label>
+					<select id="compound-selection"></select>
+				</form>
+				<div class="user-info">
+					<img src="/src/images/maleUser.png" alt="user image" />
+				</div>
+			</header>
+
+			<main class="content">
+				<div class="indicators">
+					<div class="visor">
+						<i class="fa-solid fa-bars-progress"></i><span id="visor1"></span>
+						<p>experiments carried out</p>
+					</div>
+					<div class="visor">
+						<i class="fa-solid fa-arrow-right-arrow-left"></i
+						><span id="visor2"></span>
+						<p>average reaction yield</p>
+					</div>
+					<div class="visor">
+						<i class="fa-solid fa-vial-circle-check"></i
+						><span id="visor3"></span>
+						<p>of average purity</p>
+					</div>
+					<div class="visor">
+						<i class="fa-solid fa-weight-hanging"></i><span id="visor4"></span>
+						<p>of product obtained</p>
+					</div>
+				</div>
+
+				<div class="panel">
+					<div class="graph emphasis"><canvas id="reaction"></canvas></div>
+					<div class="graph group">
+						<div class="properties">
+							<h4>Product sheet</h4>
+							<ul>
+								<li>
+									<span class="item">Compound: </span><span id="name"></span>
+								</li>
+								<li>
+									<span class="item">CAS number: </span><span id="CAS"></span>
+								</li>
+								<li>
+									<span class="item">Molecular weight: </span
+									><span id="weigth"></span>
+								</li>
+								<li>
+									<span class="item">Density: </span><span id="density"></span>
+								</li>
+								<li>
+									<span class="item">Physical state: </span
+									><span id="state"></span>
+								</li>
+								<li>
+									<span class="item">Characteristics: </span
+									><span id="charac"></span>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="graph group"><canvas id="catalyst"></canvas></div>
+					<div class="graph group"><canvas id="rate"></canvas></div>
+					<div class="graph group"><canvas id="purity"></canvas></div>
+				</div>
+			</main>
+		</div>
+
+		<script src="/src/js/script.js"></script>
+		<script src="/src/js/dashboardData.js"></script>
+		<script src="/src/js/dashbordBuild.js"></script>
+		<script src="/src/js/dashboadUpdate.js"></script>
+	</body>
+</html>

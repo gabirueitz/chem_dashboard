@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Bitcount+Prop+Single:wght@100..900&family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap");
+
+:root {
+	--background: rgb(240, 240, 240);
+	--color1: #191970;
+	--color2: #1e90ff;
+	--color3: #eaeafa;
+	--visor1: #dc143c;
+	--visor2: #2db950;
+	--visor3: #ff8c00;
+	--nav-width: 180px;
+	--search-width: 0px;
+	--header-height: 50px;
+}
+
+body {
+	display: flex;
+	position: relative;
+}
+
+#menu-button {
+	background-color: var(--color1);
+	color: var(--color3);
+	width: 30px;
+	height: 30px;
+	position: absolute;
+	top: 10px;
+	left: var(--nav-width);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	border-radius: 0 5px 5px 0;
+	transition: all 0.5s;
+}
+
+#menu-button:active > i {
+	transform: translate(1px, 1px);
+}
+
+aside {
+	height: 100dvh;
+	width: var(--nav-width);
+	background-color: var(--color1);
+	transition: all 0.5s;
+}
+
+aside .logo {
+	height: var(--header-height);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+aside .logo h2 {
+	color: var(--color3);
+	font-family: "Winky Rough", sans-serif;
+	font-size: 24px;
+	font-weight: 400;
+	user-select: none;
+}
+
+aside .logo h2 span {
+	font-family: "Bitcount Prop Single", system-ui;
+	font-size: 26px;
+}
+
+nav {
+	height: calc(100% - var(--header-height));
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+nav ul li {
+	margin: 10px 0 10px 0;
+}
+
+nav ul li a {
+	color: var(--background);
+	font-size: 16px;
+	padding: 10px 15px;
+	display: block;
+}
+
+nav ul li a.nav-active {
+	color: var(--color1);
+	background-color: var(--background);
+	border-left: 4px solid var(--color2);
+	font-weight: bold;
+}
+
+nav ul li a:hover {
+	border-left: 4px solid var(--color2);
+}
+
+header {
+	height: var(--header-height);
+	display: flex;
+	justify-content: space-between;
+	padding: 5px 20px;
+	margin-left: 20px;
+}
+
+header .data-info {
+	font-size: 15px;
+	height: 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 5px;
+}
+
+header .data-info select {
+	padding: 5px;
+	border-radius: 20px;
+}
+
+header .data-info select:hover {
+	box-shadow: 0 2px 3px var(--color1);
+}
+
+header .user-info img {
+	width: 40px;
+	border-radius: 20px;
+	cursor: pointer;
+}
+
+header .user-info img:hover {
+	box-shadow: 0 2px 3px var(--color1);
+}
+
+/* ----- RESPONSIVE ----- */
+@media (max-width: 1300px) {
+    :root{
+        --nav-width: 0px;
+    }
+}
