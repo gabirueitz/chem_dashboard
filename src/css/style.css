@@ -129,10 +129,3 @@ header .user-info img {
 header .user-info img:hover {
 	box-shadow: 0 2px 3px var(--color1);
 }
-
-/* ----- RESPONSIVE ----- */
-@media (max-width: 1300px) {
-    :root{
-        --nav-width: 0px;
-    }
-}
