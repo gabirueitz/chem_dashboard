@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Bitcount+Prop+Single:wght@100..900&family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap");
 
 :root {
-	--background: rgb(240, 240, 240);
+	--background: rgb(235, 235, 235);
 	--color1: #191970;
 	--color2: #1e90ff;
 	--color3: #eaeafa;
@@ -120,12 +120,37 @@ header .data-info select:hover {
 	box-shadow: 0 2px 3px var(--color1);
 }
 
+header .user-info {
+	position: relative;
+}
+
 header .user-info img {
 	width: 40px;
 	border-radius: 20px;
 	cursor: pointer;
 }
 
-header .user-info img:hover {
+header .user-info .user-popup {
+	height: 20px;
+	width: 80px;
+	background-color: rgba(255, 255, 255, 0.8);
+	display: none;
+	position: absolute;
+	border-radius: 5px;
+	font-size: 10px;
+	z-index: 10;
+	right: -10px;
+	bottom: -15px;
+	box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+	user-select: none;
+}
+
+header .user-info:hover .user-popup {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+header .user-info:hover img {
 	box-shadow: 0 2px 3px var(--color1);
 }
